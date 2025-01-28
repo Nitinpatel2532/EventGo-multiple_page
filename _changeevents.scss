@@ -1,0 +1,21 @@
+.mainevents{
+    display: flex;
+    justify-content:start;
+    padding: 50px;
+    // gap: 10px;
+   .eventsimg{
+    width: 170px;
+    height: 170px;
+    border: 1px solid;
+    
+   }
+   .zoomeveimg{
+    // background-image: url(eventgo_io_cover.jpeg);
+    background-size:cover;
+    width: 800px;
+    border: 1px solid;
+    height: 400px;
+   }
+
+  
+}

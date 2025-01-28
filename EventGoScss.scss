@@ -1,0 +1,24 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.92);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+// we create separate file of each section for easily manage them..and import
+// them by using @import method....
+
+@import "_Firstnavbar.scss";
+@import "_firstEventSection.scss";
+@import "_changeevents.scss";
+@import "_hero1.scss";
+@import "_scroll_img.scss";
+@import "_update_events.scss";
+@import "_eventpage.scss";
+@import "_movie_section.scss";
+@import "_Live_event.scss";
+
+.theme1{
+    background-color: white;
+    color: white;
+}

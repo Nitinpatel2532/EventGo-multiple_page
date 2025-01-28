@@ -1,0 +1,167 @@
+.Event_title{
+  font-size: 11px;
+  font-family: serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+.Movies{
+  display: flex;
+  background-color: white;
+  gap: 20px;
+  overflow-x: scroll;
+  padding: 10px;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  margin-top: 20px;
+  // height: 300px;
+  
+
+  
+  .mov{
+    // text-align: center;
+    // align-items: center;
+    background-color: rgb(38, 35, 35);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding:5px;
+    border-radius: 20px;
+    // width: 300px;
+    // height: 500px;
+    box-sizing: border-box;
+   
+
+
+    
+    img{
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      object-fit: cover;
+
+  }
+    
+
+    .release_date{
+      h4{
+        color: white;
+        font-size: 10px;
+        background-color:white;
+        color: red;
+        // width: 280px;
+        padding: 3px;
+        border-radius: 10px;
+        white-space: pre-line;
+
+
+      }
+    }
+    .title{
+     
+      h3{
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-family: cursive;
+        font-style: oblique;
+        font-weight: bolder;
+        // line-break: auto;
+        white-space: pre-line;
+      }
+    }
+    .content{
+      color: white;
+      font-size: 10px;
+      font-style: italic;
+        font-weight: bolder;
+    } 
+    #book_button{
+      background-color: blueviolet;
+      padding: 4px;
+      border-style: none;
+      width: 200px;
+      border-radius: 15px;
+    }   
+    #book_button:hover{
+      background-color: blue;
+      
+      border: 3px solid black;
+      width: 200px;
+      border-radius: 10px;
+      color: white;
+
+    }
+
+  }}
+
+  @media (max-width:500px){
+
+    .Movies{
+       gap: 10px;
+       padding: 5px;
+       margin-top: 10px;
+       background-color: black;
+
+       .mov{
+        background-color:white;
+        color: black;
+
+        img{
+          width: 220px;
+          height: 220px;
+        }
+
+        .release_date{
+          h4{
+            color: white;
+            font-size: 10px;
+            background-color:black;
+            // color: red;
+            // width: 280px;
+            padding: 3px;
+            border-radius: 10px;
+            white-space: pre-line;
+    
+    
+          }
+        }
+
+        .title{
+     
+          h3{
+            text-align: center;
+            color: black;
+            font-size: 15px;
+            font-family: cursive;
+            font-style: oblique;
+            font-weight: bolder;
+            // line-break: auto;
+            white-space: pre-line;
+          }
+        }
+        .content{
+          color: black;
+          font-size: 8px;
+          font-style: italic;
+            font-weight: bolder;
+        } 
+        #book_button{
+          background-color: red;
+          color: white;
+          padding: 4px;
+          border-style: none;
+          width: 200px;
+          border-radius: 15px;
+        }
+
+
+
+      }
+
+  }
+ 
+
+  }

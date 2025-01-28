@@ -1,0 +1,43 @@
+.hero1{
+    background-image: url(confere.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-clip: border-box;
+    background-attachment: fixed;
+    // margin-top: 10px;
+    color: white;
+    padding: 100px;
+    text-align: center;
+    align-items: center;
+    
+    h1{
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.556);
+    }
+}
+@media (max-width:800px){
+    .hero1{
+        padding: 50px;
+
+        h1{
+            font-size: 35px;
+            color: rgba(255, 255, 255, 0.747);
+        }
+    }
+}
+@media (max-width:500px){
+    .hero1{
+        padding: 50px;
+
+      
+
+        h1{
+            font-size: 25px;
+            color: rgba(255, 255, 255, 0.747);
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+}

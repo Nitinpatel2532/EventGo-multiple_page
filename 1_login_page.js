@@ -12,12 +12,15 @@ check_data = () => {
 
     if (uname != signup_data.username || upassword != signup_data.password) {
         alert("Incorrect Username or password !")
+        // document.querySelector("#username1").focus()
+        document.querySelector("#password1").focus()
+
         return false;
     } else {
         return true;
     }
     
- console.log(signup_data)
+//  console.log(signup_data)
     
 
 

@@ -59,7 +59,7 @@ let password1 = document.querySelector("#password1").value;
     if (name1 == "" || email1 == "" || contact1 == "" || password1 == "" || repasswod1 == "") {
         alert("All fields are mandoratory...");
         return false;
-    } else if (email1=="") {
+    } else if (!(email1.match(/[@.]/))) {
         alert("Email is not valid..")
         document.querySelector("#email1").focus();
         return false;
@@ -73,7 +73,7 @@ let password1 = document.querySelector("#password1").value;
         document.querySelector("#Contact1").focus()
         return false;
     } else if (password1.length < 8) {
-        alert("please create strong password")
+        alert("please create strong password (max-8 digit)")
         document.querySelector("#password1").focus()
         return false;
     }

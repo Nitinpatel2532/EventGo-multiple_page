@@ -1,0 +1,55 @@
+// we creates a mixin (function) for store css data and used them into multiple
+// section with same property.
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#marq{
+    color: white;
+    padding: 3px;
+}
+@mixin navbar(){
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 1px;
+}
+
+// for manage all ul links..
+
+@mixin ulmanage(){
+    display: flex;
+    list-style: none;
+    // justify-content:space-evenly;
+     gap:20px;   
+}
+
+.navbar{
+    // padding: 50px;
+
+    // to use the created mixin we use @include method.
+    @include navbar();
+    .uldiv ul{
+        @include ulmanage();
+        li a{
+            color: black;
+            text-decoration-line: none; 
+
+        }
+        a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+        
+    }
+   
+}
+@media  (max-width:500px) {
+    .uldiv li{
+        display: none;
+    }
+
+}

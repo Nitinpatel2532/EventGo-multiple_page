@@ -1,0 +1,43 @@
+.allevents{
+    display: flex;
+    overflow-x: scroll;
+    white-space:nowrap;
+    gap: 20px;
+    padding: 5px;
+    scrollbar-width:thin;
+    scroll-behavior:smooth;
+    
+
+    .event2{
+        text-align: center;
+        color: black;
+    }
+
+
+}
+.allevents::-webkit-scrollbar{
+    height: 8px;
+}
+.allevents::-webkit-scrollbar-thumb{
+    background-color: blanchedalmond;
+    border-radius: 4px;
+}
+.allevents::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(37, 63, 104);
+}
+
+.event2 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    object-fit: cover;
+    
+}
+@media (max-width:500px){
+    .image_container img{
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+    }
+
+}
