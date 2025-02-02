@@ -9,13 +9,13 @@ body{
     padding: 3px;
 }
 @mixin navbar(){
-    background-color: white;
+    background-color: rgb(29, 157, 93);
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    padding: 1px;
+    // padding: 1px;
 }
 
 // for manage all ul links..
@@ -28,28 +28,92 @@ body{
 }
 
 .navbar{
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid;
+    
     // padding: 50px;
+
+    .logo{
+       h1{
+        text-shadow: 1px 3px 3px black;
+        margin: 0px;
+        padding: 0px;
+        padding: 3px;
+        font-family: cursive;
+
+
+       }
+       
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+
+    }
 
     // to use the created mixin we use @include method.
     @include navbar();
     .uldiv ul{
+       
         @include ulmanage();
         li a{
+           
             color: black;
             text-decoration-line: none; 
 
         }
         a:hover{
-            color: blue;
+            color: white;
             text-decoration: underline;
         }
         
     }
    
 }
-@media  (max-width:500px) {
-    .uldiv li{
-        display: none;
+.social_icons{
+    ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+
+        li{
+            list-style: none;
+
+            a{
+                font-size: 20px;
+            }
+            a:hover{
+                border: 1px solid;
+                padding: 3px;
+            }
+        }
+        
+
+
     }
+   
+}
+@media screen and  (max-width:750px) {
+    .navbar{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
+@media screen and  (max-width:550px) {
+    .navbar{
+       h1{
+        font-size: 20px;
+       }
+        gap: 2px;
+        .uldiv a{
+        font-size: 12px;
+        }
+    }
+     .uldiv ul{
+        gap: 2px;
+     }
 
 }

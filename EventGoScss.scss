@@ -1,8 +1,17 @@
+*{
+    box-sizing: border-box;
+    // margin: 0;
+    // padding: 0;
+}
+
 body{
     margin: 0px;
     padding: 0px;
     background-color: rgba(0, 0, 0, 0.92);
     font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+html{
+    scroll-behavior: smooth;
 }
 
 // we create separate file of each section for easily manage them..and import
@@ -17,6 +26,7 @@ body{
 @import "_eventpage.scss";
 @import "_movie_section.scss";
 @import "_Live_event.scss";
+@import "_footerbar.scss";
 
 .theme1{
     background-color: white;

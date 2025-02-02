@@ -11,51 +11,38 @@
     
 
     .div1img{
-        text-align: center;
-        align-items: center;
         color: white;
-        // width: 250px;
         box-sizing: border-box;
         border: 2px solid wheat;
+        padding: 5px;
+        width: 350px;
+        text-align: center;
+      
         
-        
+        img{
+            width:250px;
+            height: 250px;
+            // aspect-ratio: 1;
+            object-fit: cover;
+            
+        }
 
         h3{
-            text-align: center;
-            border: 1px solid black;
-            border-radius: 5px;
-            width: 200px;
-            padding: 3px;
             font-size: 12px;
-            word-wrap: break-word;
-            
+            word-wrap: break-word; 
+          
             
         }
         p{
             font-size:10px;
             color: white;
-            text-align: center;
+           
            white-space: pre-line;
            
             
         }
-        button{
-            background-color: red;
-            border-radius: 10px;
-            width: 230px;
-            padding: 3px;
-            color: whitesmoke;
 
-            
-
-        }
-        button:hover{
-            background-color: blue;
-        }
-        
-    }
-
-
+}
 }
 .image_container::-webkit-scrollbar{
     height: 8px;
@@ -68,25 +55,14 @@
     background-color: rgb(37, 63, 104);
 }
 
-.image_container img{
-    width: 250px;
-    height: 250px;
-    border-radius: 15px;
-    object-fit: cover;
-    
-}
-@media (max-width:500px){
-    .image_container img{
-        width: 250px;
-        height: 350px;
-        object-fit:cover;
-    }
-    .eventbox{
-        font-size: 10px;
-        font-family: cursive;
-        font-weight: 600;
-        font-style:italic;
 
+
+@media screen and (max-width:550px){
+    .image_container img{
+        width: 220px;
+        height: 230px;
+        object-fit:cover;
+        border-radius: 15px;
     }
 
 }
