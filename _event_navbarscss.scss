@@ -1,0 +1,44 @@
+.event_navbar{
+    background-color: blanchedalmond;
+   padding: 1px;
+   border: 1px solid black;
+
+    ul{
+        display: flex;
+        justify-content: center;
+        
+
+        li{
+            list-style: none;
+
+            a{
+                display: block;
+                padding-left: 20px;
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+                font-size:15px;
+
+               
+            }
+           
+        }
+    }
+    a:hover{
+        color: blue;
+        text-decoration-line: underline;
+        text-decoration-color: black;
+        }
+}
+
+// ===========================================================
+
+// making responsive
+
+@media screen and (max-width:550px){
+    .event_navbar ul li a{
+        font-size: 12px;
+        padding: 10px;
+    }
+
+}

@@ -1,7 +1,5 @@
 *{
     box-sizing: border-box;
-    // margin: 0;
-    // padding: 0;
 }
 
 body{
@@ -17,6 +15,9 @@ html{
 // we create separate file of each section for easily manage them..and import
 // them by using @import method....
 
+// login page / signup page
+@import "_loginpage.scss";
+@import "_signup_page.scss";
 @import "_Firstnavbar.scss";
 @import "_firstEventSection.scss";
 @import "_changeevents.scss";
@@ -25,8 +26,23 @@ html{
 @import "_update_events.scss";
 @import "_eventpage.scss";
 @import "_movie_section.scss";
-@import "_Live_event.scss";
+
 @import "_footerbar.scss";
+@import "_popup_page.scss";
+@import "_loc_pop_bar.scss";
+
+// 2 page linking (events)
+
+@import "_2htmlpage-scrollbar.scss";
+@import "_event_navbarscss.scss";
+
+// 3page (movies)
+
+@import "_movies_page_scss.scss";
+
+// movie_detail
+@import "_movie_detail_page_scss.scss";
+
 
 .theme1{
     background-color: white;

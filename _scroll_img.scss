@@ -15,15 +15,17 @@
         box-sizing: border-box;
         border: 2px solid wheat;
         padding: 5px;
-        width: 350px;
+        flex-basis: 20%;
+        min-width: 250px;
         text-align: center;
+        // background-color: #fff;
       
         
         img{
-            width:250px;
-            height: 250px;
+            width:100%;
+            aspect-ratio: 1;
             // aspect-ratio: 1;
-            object-fit: cover;
+            // object-fit: cover;
             
         }
 
@@ -36,12 +38,18 @@
         p{
             font-size:10px;
             color: white;
-           
            white-space: pre-line;
            
             
         }
 
+}
+.div1img:hover{
+    background-color: #fff;
+    color: black;
+    p{
+        color: black;
+    }
 }
 }
 .image_container::-webkit-scrollbar{

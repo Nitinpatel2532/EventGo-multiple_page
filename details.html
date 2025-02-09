@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie_Detail</title>
+    <link rel="stylesheet" href="EventGoScss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body style="background-color:grey;">
+    <div class="navbar">
+        <div class="logo">
+            <h1><i>Event<span style="color: white;">Go</span>!</i></h1>
+        </div>
+
+        <div class="uldiv">
+            <ul>
+                <li><a href="Eventgo_homepage.html">Home</a></li>
+                <li><a href="3_moviepage.html">Movies </a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Play</a></li>
+                <li><a href="">Activity</a></li>
+
+            </ul>
+        </div>
+
+        <div class="social_icons">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-square-google-plus"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- <div class="detailnav">
+        <ul>
+            <li><a href="Eventgo_homepage.html">Home</a></li>
+            <li><a href="3_moviepage.html">Back</a></li>
+        </ul>
+    </div> -->
+    
+    <div class="details_container">
+        <div class="movie_image_div">
+            <img id="itemImage" src="" alt="Item Image">
+            <video id="movie_trailer" src="" controls  ></video>
+        </div>
+       
+        <h2 id="movie_names" style="color: white; font-family:'Courier New'"></h2>
+        <h3 id="itemTitle"></h3>
+        <p id="itemPrice"></p>
+        <p id="itemLanguage"></p>
+        <p id="movie_desc"></p>
+        <p id="movie_release_date"></p>
+        <p id="movie_director"></p>
+        <p id="movie_cast"></p>
+       <button id="book_now">Book Now</button>
+    </div>
+
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            const itemData = JSON.parse(localStorage.getItem("selectedItem"));
+            if (itemData) {
+                document.getElementById("itemImage").src = itemData.movie_img;
+                document.getElementById("movie_names").textContent = itemData.movie_name;
+                document.getElementById("itemTitle").textContent = itemData.movie_type;
+                // document.getElementById("itemPrice").textContent = "Price: " + itemData.movie_price;
+                document.getElementById("itemLanguage").textContent = "Language: " + itemData.movie_lang;
+                document.getElementById("movie_desc").textContent =itemData.movie_desc;
+                document.getElementById("movie_release_date").textContent =itemData.movie_release_date;
+                document.getElementById("movie_director").textContent =itemData.movie_director;
+                document.getElementById("movie_cast").textContent = itemData.movie_cast;
+                document.getElementById("movie_trailer").src=itemData.movie_trailer;
+                document.body.style.backgroundImage=` url('${itemData.movie_img}') `;
+                document.body.style.backgroundSize="cover";
+                document.body.style.backgroundRepeat="no-repeat";
+                // document.body.style.backgroundPosition="center";
+
+
+               
+               
+                
+            }
+        });
+      
+        // document.body.style.backgroundImage="url(stk2.jpg)"
+
+        // booking ticket
+         document.getElementById("book_now").addEventListener("click",()=>{
+            window.location.href="1_login_page.html";
+         })
+      
+    </script>
+
+</body>
+</html>

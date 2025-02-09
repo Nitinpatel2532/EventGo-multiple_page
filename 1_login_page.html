@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login_Page</title>
-    <link rel="stylesheet" href="1_login_page.css">
+    <!-- <link rel="stylesheet" href="1_login_page.css"> -->
+    <link rel="stylesheet" href="EventGoScss.css">
 </head>
 <body>
+<div class="header">
+    <div class="dateshow">
+        <h2>Event<span style="color: black;">Go</span>!</h2>
+        <p id="dateshowTime"></p>     
+    </div>
     
     <div class="logindiv">
         <div class="login">
-            <form action="3_Eventgo_homepage.html" onsubmit=" return check_data()">
+            <form action="Eventgo_homepage.html" onsubmit=" return check_data()">
 
                 <h1>Login</h1>
                 <input type="text" placeholder="Username" id="username1">
                 <br><br>
                 <input type="password" placeholder="password" id="password1">
-                <br>
-                <input type="checkbox"> Forgot password
+                <br><br>
+                <input type="checkbox"><a href="forgot_password.html" style="color:white;">Forgot password</a> 
                 <br><br>
                 <input type="submit" value="Login" id="loginbtn">
                 <br>
@@ -27,8 +33,10 @@
            
         </div>
     </div>
+</div>
 
 
-    <script src="1_login_page.js"></script>
+
+    <script src="EventGoScss.js"></script>
 </body>
 </html>

@@ -1,0 +1,92 @@
+.header{
+    background-image: url(realistic-neon-lights-background_23-2148907367.avif);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: sticky;
+    top: 0;
+
+.dateshow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+.logindiv{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; 
+    align-items: center;
+
+ .login{
+ 
+    border-top-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+    color: white;
+    background-color: rgba(0, 119, 255, 0.126);
+    background-image: url(realistic-neon-lights-background_23-2148907367.avif);
+    background-blend-mode:darken;
+    padding: 20px;
+    border: 1px solid gold;
+
+    h1{
+        color: rgba(255, 255, 255, 0.413);
+    }
+}
+}
+.login:hover{
+    border: 2px solid white;
+}
+#username1{
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px;
+    border-style: none;
+    padding: 5px;
+    background-color:rgba(255, 166, 0, 0.243);
+    color: white;
+   
+}
+#username1::placeholder{
+    color: white;
+}
+#password1{
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px;
+    border-style: none;
+    padding: 5px;
+    background-color:rgba(255, 166, 0, 0.243);
+    color: white;
+   
+}
+#password1::placeholder{
+    color: white;
+}
+#loginbtn{
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    border-style: none;
+    padding: 5px;
+    font-size: small;
+}
+#loginbtn:hover{
+    color: white;
+    background-color:red;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+}
+
+// making responsive
+@media screen and (max-width:550px){
+    .login{
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        padding: 10px;
+    }
+}

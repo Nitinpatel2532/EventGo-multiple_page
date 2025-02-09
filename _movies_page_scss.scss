@@ -1,0 +1,265 @@
+.All_movies {
+    display: flex;
+    justify-content: space-around;
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        flex: 0 0 40vh;
+        margin: 10px;
+        padding: 10px;
+
+        .lang {
+            background-color: whitesmoke;
+            padding: 10px;
+
+            a {
+
+                color: black;
+                text-decoration: none;
+                // border: 1px solid black;
+                padding: 5px;
+                font-size: 12px;
+
+
+            }
+        }
+
+        .geners {
+            background-color: whitesmoke;
+            padding: 10px;
+
+            a {
+
+                color: black;
+                text-decoration: none;
+                // border: 1px solid black;
+                padding: 5px;
+                font-size: 12px;
+
+            }
+        }
+
+        .Format {
+            background-color: whitesmoke;
+            padding: 10px;
+
+            a {
+
+                color: black;
+                text-decoration: none;
+                // border: 1px solid black;
+                padding: 5px;
+                font-size: 12px;
+
+            }
+        }
+
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+    }
+
+}
+// =================================================================================
+.book_movies {
+    padding: 10px;
+}
+
+.book_movies2 {
+    display: flex;
+    justify-content: space-around;
+    // gap: 10px;
+    padding: 10px;
+    // text-align: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    // background-color: rebeccapurple;
+
+}
+
+    .mov_detail {
+        flex-basis: 15%;
+        min-width: 230px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color:white;
+        box-sizing: border-box;
+        margin: 5px;
+        color: black;
+
+        h3 {
+            font-size: 13px;
+
+        }
+
+        p {
+            font-size: 11px;
+        }
+
+    }
+    .mov_detail img {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 10px;
+            // object-fit: cover;
+
+        }
+        .mov_detail:hover{
+            background-color: rgb(34, 23, 23);
+            color: white;
+            h3{
+            color: red;
+            }
+            img{
+                object-fit:cover;
+            }
+        }
+       
+    
+
+
+// ===========================================
+
+// making responsive
+
+@media screen and (max-width:710px) {
+    .book_movies {
+        padding: 8px;
+
+        .book_movies2 {
+            // gap: 8px;
+            padding: 8px;
+
+            .mov_detail {
+                flex-basis: 17%;
+                min-width: 200px;
+
+                h3 {
+                    font-size: 11px;
+
+                }
+
+                p {
+                    font-size: 9px;
+                }
+
+
+                .mov_detail img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                    border-radius: 10px;
+                    // object-fit: cover;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width:550px) {
+    .All_movies {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+
+    .filter{
+margin: 0px;
+    
+
+            .lang {
+                background-color: whitesmoke;
+                padding: 5px;
+
+                a {
+
+                    color: black;
+                    text-decoration: none;
+                    // border: 1px solid black;
+                    padding: 3px;
+                    font-size: 9px;
+
+
+                }
+            }
+
+            .geners {
+                background-color: whitesmoke;
+                padding: 3px;
+
+                a {
+
+                    color: black;
+                    text-decoration: none;
+                    // border: 1px solid black;
+                    padding: 5px;
+                    font-size: 9px;
+
+                }
+            }
+
+            .Format {
+                background-color: whitesmoke;
+                padding: 5px;
+
+                a {
+
+                    color: black;
+                    text-decoration: none;
+                    // border: 1px solid black;
+                    padding: 3px;
+                    font-size: 9px;
+
+                }
+            }
+
+    }
+    }
+
+    .book_movies {
+        padding: 4px;
+
+        .book_movies2 {
+            // gap: 3px;
+            padding: 4px;
+
+            .mov_detail {
+                flex-basis: 12%;
+                min-width: 180px;
+
+                h3 {
+                    font-size: 9px;
+
+                }
+
+                p {
+                    font-size: 7px;
+                }
+
+
+                .mov_detail img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                    border-radius: 10px;
+                    // object-fit: cover;
+
+                }
+            }
+        }
+    }
+
+.footer2 , .footer3{
+    display: none;
+  
+}
+.footer1{
+    h1{
+        font-size: 8px;
+    }
+}
+}

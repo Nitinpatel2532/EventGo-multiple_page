@@ -1,0 +1,102 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.signupdiv{
+    text-align: center;
+    background-image: url(realistic-neon-lights-background_23-2148907367.avif);
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    color: white;
+}
+.signup{
+    border: 1px solid white;
+    padding: 15px;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+#username1{
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    font-size: 12px;
+}
+#username1::placeholder{
+    color: black;
+}
+#email1{
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    font-size: 12px;
+}
+#email1::placeholder{
+    color: black;
+}
+#Contact1{
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    font-size: 12px;
+}
+#Contact1::placeholder{
+    color: black;
+}
+#password1{
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    font-size: 12px;
+}
+#password1::placeholder{
+    color: black;
+}
+
+#repassword{
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    font-size: 12px;
+}
+#repassword::placeholder{
+    color: black;
+}
+#signbtn{
+    width: 200px;
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    border-style: none;
+    border-radius: 10px;
+}
+#signbtn{
+    width: 200px;
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    border-style: none;
+    border-radius: 10px;
+}
+#signbtn:hover{
+    background-color: blue;
+   
+}
+#signbtn2{
+    width: 200px;
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    border-style: none;
+    border-radius: 10px;
+}
+#signbtn2:hover{
+    background-color: blue;
+}

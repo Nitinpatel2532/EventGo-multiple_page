@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_book_movies</title>
+    <link rel="stylesheet" href="EventGoScss.css">
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.item {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.item:hover {
+    background-color: #f0f0f0;
+}
+
+.item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="items-container" id="itemsContainer"></div>
+
+
+    <script>
+      
+const items = [
+    { title: "Book A", price: "$15", language: "English", image: "book1.jpg" },
+    { title: "Book B", price: "$20", language: "French", image: "book2.jpg" },
+    { title: "Book C", price: "$25", language: "Spanish", image: "book3.jpg" },
+    { title: "Book D", price: "$18", language: "German", image: "book4.jpg" },
+    { title: "Book E", price: "$22", language: "Italian", image: "book5.jpg" },
+    { title: "Book F", price: "$19", language: "English", image: "book6.jpg" },
+    { title: "Book G", price: "$30", language: "French", image: "book7.jpg" },
+    { title: "Book H", price: "$28", language: "Spanish", image: "book8.jpg" },
+    { title: "Book I", price: "$24", language: "German", image: "book9.jpg" },
+    { title: "Book J", price: "$27", language: "Italian", image: "book10.jpg" }
+];
+const container = document.getElementById("itemsContainer");
+
+items.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.classList.add("item");
+    div.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <h3>${item.title}</h3>
+        <p>Price: ${item.price}</p>
+        <p>Language: ${item.language}</p>
+    `;
+    
+    div.addEventListener("click", () => {
+        localStorage.setItem("selectedItem", JSON.stringify(item));
+        window.location.href = "details.html";
+    });
+
+    container.appendChild(div);
+});
+
+    </script>
+</body>
+</html>
