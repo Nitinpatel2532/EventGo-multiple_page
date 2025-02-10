@@ -20,7 +20,7 @@
             <ul>
                 <li><a href="Eventgo_homepage.html">Home</a></li>
                 <li><a href="3_moviepage.html">Movies </a></li>
-                <li><a href="">Events</a></li>
+                <li><a href="2_eventpage.html">Events</a></li>
                 <li><a href="">Play</a></li>
                 <li><a href="">Activity</a></li>
 
@@ -36,20 +36,18 @@
         </div>
 
     </div>
-    <!-- <div class="detailnav">
-        <ul>
-            <li><a href="Eventgo_homepage.html">Home</a></li>
-            <li><a href="3_moviepage.html">Back</a></li>
-        </ul>
-    </div> -->
+
+
+    <!-- Getting movies,Events and other things that is stored in LocalStorage -->
     
     <div class="details_container">
         <div class="movie_image_div">
             <img id="itemImage" src="" alt="Item Image">
             <video id="movie_trailer" src="" controls  ></video>
         </div>
-       
+        
         <h2 id="movie_names" style="color: white; font-family:'Courier New'"></h2>
+        <h2 id="Eventer_names"></h2>
         <h3 id="itemTitle"></h3>
         <p id="itemPrice"></p>
         <p id="itemLanguage"></p>
@@ -57,6 +55,7 @@
         <p id="movie_release_date"></p>
         <p id="movie_director"></p>
         <p id="movie_cast"></p>
+        <p id="event_location"></p>
        <button id="book_now">Book Now</button>
     </div>
 
@@ -66,6 +65,7 @@
             if (itemData) {
                 document.getElementById("itemImage").src = itemData.movie_img;
                 document.getElementById("movie_names").textContent = itemData.movie_name;
+                document.getElementById("Eventer_names").textContent = itemData.eventer_name;
                 document.getElementById("itemTitle").textContent = itemData.movie_type;
                 // document.getElementById("itemPrice").textContent = "Price: " + itemData.movie_price;
                 document.getElementById("itemLanguage").textContent = "Language: " + itemData.movie_lang;
@@ -74,6 +74,7 @@
                 document.getElementById("movie_director").textContent =itemData.movie_director;
                 document.getElementById("movie_cast").textContent = itemData.movie_cast;
                 document.getElementById("movie_trailer").src=itemData.movie_trailer;
+                document.getElementById("event_location").textContent=itemData.location;
                 document.body.style.backgroundImage=` url('${itemData.movie_img}') `;
                 document.body.style.backgroundSize="cover";
                 document.body.style.backgroundRepeat="no-repeat";
@@ -86,11 +87,12 @@
             }
         });
       
-        // document.body.style.backgroundImage="url(stk2.jpg)"
+    
 
         // booking ticket
+        
          document.getElementById("book_now").addEventListener("click",()=>{
-            window.location.href="1_login_page.html";
+            window.location.href="booking_page.html";
          })
       
     </script>

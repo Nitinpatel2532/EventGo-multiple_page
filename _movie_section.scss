@@ -52,14 +52,6 @@
     border: 2px solid white;
     // object-fit: cover;
 }
-.release_date{
-  margin: 0;
-  padding: 0;
-  // border: 2px solid white;
- 
-  
-
-}
  h4{
   color:red;
   background-color: white;
@@ -67,37 +59,24 @@
   padding: 3px 0;
  
 }
-
-.title{
-  color: white;
-  white-space: pre-line;
-  margin: 0;
-  padding: 0;
-
+h3{
+  font-size: 15px;
+  font-family: cursive;
 }
-.content{
-  color: white;
-  white-space: pre-line;
-  margin: 0;
-  padding: 0;
-}
+
 .btn{
 
   align-self: center;
   margin-top: auto;
- a{
-  background-color: blueviolet;
-  color: white; 
-  text-decoration: none;
-
-  border-radius:8px;
-  border: 2px solid transparent;
-  padding: 5px;                                               
- }
+  background-color: red;
+  border-style: none;
+  color: white;
+  padding: 3px;
+  border-radius: 10px;
  
 }
 
-.btn a:hover{
+.btn:hover{
   background-color: transparent;
   border: 2px solid blueviolet;
 

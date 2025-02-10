@@ -1,0 +1,47 @@
+.ticket_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(128, 128, 128, 0.154);
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+
+    .ticket_container{
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        
+        .ticket_type{
+            border: 2px solid black;
+            padding: 7px;
+            cursor: pointer;
+            background-color: darksalmon;
+            border-radius: 10px;
+            color: white;
+        }
+    }
+    .total_price{
+        border: 1px solid;
+        padding: 4px;
+        border-radius: 5px;
+        background-color: #fff;
+        font-style:oblique;
+
+        #total{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style:oblique;
+            font-size: 18px;
+        }
+    }
+    #pay_btn{
+        background-color: rgba(183, 43, 43, 0.818);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+}

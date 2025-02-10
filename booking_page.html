@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking_page</title>
+    <link rel="stylesheet" href="EventGoScss.css">
+
 </head>
-<body>
-    bookingpage
+
+<body style="background-color: white;">
+
+    <div class="ticket_header">
+     <h2> Book Your Movie Tickets</h2>
+    <form action="">
+        <label for="UserName">Name</label>
+        <input type="text" placeholder="Enter Your Name" id="UserName">
+        <br><br>
+
+        <label for="UserEmail">Email</label>
+        <input type="text" placeholder="Enter Your Name" id="UserEmail">
+        <br><br>
+
+        <label for="UserContact">Contact</label>
+        <input type="text" placeholder="Enter Your Name" id="UserContact">
+        <br><br>
+
+        <label for="UserAge">Age</label>
+        <input type="text" placeholder="Enter Your Name" id="UserAge">
+        <br><br>
+
+        <label for="UserGender">Gender:</label>
+        <input type="Radio" id="male" name="mf">Male
+        <input type="Radio" id="female" name="mf">Female
+        <br><br>
+
+        <div class="ticket_container">
+            <div class="ticket_type" onclick="selected_ticket('Normal',130)">Normal: 130</div>
+            <div class="ticket_type" onclick="selected_ticket('Exclusive',180)">Exclusive: 180</div>
+            <div class="ticket_type" onclick="selected_ticket('Premium',250)">Premium: 250</div>
+        </div>
+        <br>
+
+        <div class="ticket_quantity">
+            <label for="quantity">Number Of Tickets:</label>
+            <input type="number" id="quantity" value="1" min="1" max="15" onchange="updateTotal()">
+        </div>
+        <br>
+
+        <div class="total_price">Total Price: <span id="total">0</span></div>
+        <br>
+        <button id="pay_btn">Pay</button>
+
+    </form>
+    </div>
+
+
+    <script src="EventGoScss.js"></script>  
 </body>
 </html>
