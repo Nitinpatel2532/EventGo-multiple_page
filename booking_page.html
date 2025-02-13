@@ -8,31 +8,32 @@
 
 </head>
 
-<body style="background-color: white;">
+<body style="background-image: url(moviebg2.avif); background-repeat: no-repeat; background-size: cover;">
 
     <div class="ticket_header">
      <h2> Book Your Movie Tickets</h2>
-    <form action="">
+    <form action="ticketshow.html" onsubmit=" return fetch_data();">
         <label for="UserName">Name</label>
         <input type="text" placeholder="Enter Your Name" id="UserName">
         <br><br>
 
         <label for="UserEmail">Email</label>
-        <input type="text" placeholder="Enter Your Name" id="UserEmail">
-        <br><br>
+        <input type="text" placeholder="Enter Your Email" id="UserEmail"><br>
+        <span id="emailFeedback" style="font-size: 10px; color: red;"></span>
+        <br>
 
         <label for="UserContact">Contact</label>
-        <input type="text" placeholder="Enter Your Name" id="UserContact">
+        <input type="text" placeholder="Enter Your Contact" id="UserContact">
         <br><br>
 
         <label for="UserAge">Age</label>
-        <input type="text" placeholder="Enter Your Name" id="UserAge">
+        <input type="text" placeholder="Enter Your Age" id="UserAge"> 
         <br><br>
 
-        <label for="UserGender">Gender:</label>
-        <input type="Radio" id="male" name="mf">Male
-        <input type="Radio" id="female" name="mf">Female
-        <br><br>
+        <!-- <label for="UserGender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">Male
+        <input type="Radio" id="female" name="gender" value="female">Female
+        <br><br> -->
 
         <div class="ticket_container">
             <div class="ticket_type" onclick="selected_ticket('Normal',130)">Normal: 130</div>
@@ -47,11 +48,13 @@
         </div>
         <br>
 
-        <div class="total_price">Total Price: <span id="total">0</span></div>
+        <div class="total_price">Total Price: <span id="total">130</span></div>
         <br>
-        <button id="pay_btn">Pay</button>
+        <button id="pay_btn" type="submit">Pay</button>
+       
 
     </form>
+
     </div>
 
 

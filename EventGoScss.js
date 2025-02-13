@@ -2,6 +2,9 @@
 
 // display date and time that change dynamically.........
 
+    
+
+
 function date_time() {
     const now = new Date();
     const format = now.toLocaleString('en-US', {
@@ -11,10 +14,14 @@ function date_time() {
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
-        second:'2-digit'
+        second:'2-digit'    
     });
-    
-            document.querySelector("#dateshowTime").textContent = format;
+   
+    let f = document.querySelector("#dateshowTime")
+    if (f) {
+        f.innerHTML = format;
+    }
+           
 
     // to change dynamically we use setInterval method
 
@@ -499,36 +506,170 @@ const outdoor = document.querySelectorAll(".Movies");
 }
 
 // ======================================================================================================================
+// form validation of booking_ticket page
 
+document.addEventListener("DOMContentLoaded", () => {
+    
+
+    document.querySelector("#UserName").addEventListener("focus", () => {
+        document.querySelector("#UserName").style.backgroundColor = "lightblue";
+    })
+    document.querySelector("#UserName").addEventListener("blur", () => {
+        document.querySelector("#UserName").style.backgroundColor = "";
+    })
+
+    document.querySelector("#UserEmail").addEventListener("focus", () => {
+        document.querySelector("#UserEmail").style.backgroundColor = "lightblue";
+    })
+    document.querySelector("#UserEmail").addEventListener("blur", () => {
+        document.querySelector("#UserEmail").style.backgroundColor = "";
+    })
+
+    document.querySelector("#UserContact").addEventListener("focus", () => {
+        document.querySelector("#UserContact").style.backgroundColor = "lightblue";
+    })
+    document.querySelector("#UserContact").addEventListener("blur", () => {
+        document.querySelector("#UserContact").style.backgroundColor = "";
+    })
+
+    document.querySelector("#UserAge").addEventListener("focus", () => {
+        document.querySelector("#UserAge").style.backgroundColor = "lightblue";
+    })
+    document.querySelector("#UserAge").addEventListener("blur", () => {
+        document.querySelector("#UserAge").style.backgroundColor = "";
+    })
+
+})
+
+function fetch_data() {
+    // event.preventDefault();
+
+    let UserName = document.querySelector("#UserName").value
+    let UserEmail = document.querySelector("#UserEmail").value;
+    const feedbackElement = document.getElementById('emailFeedback');
+    let UserContact = document.querySelector("#UserContact").value;
+    let UserAge = document.querySelector("#UserAge").value;
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(UserEmail)) {
+        feedbackElement.textContent = ''; // Clear feedback
+        feedbackElement.style.color = 'green';
+        feedbackElement.textContent = '✓ Valid email format';
+        // Proceed with form submission or further processing
+    } else {
+        feedbackElement.style.color = 'red';
+        feedbackElement.textContent = 'Please enter a valid email address.';
+        document.querySelector("#UserEmail").focus()
+        return false;
+    }
+
+    
+       
+
+        
+        if (UserName == "" || UserEmail == "" || UserContact == "" || UserAge == "") {
+            alert("All fields are mandoratory...");
+            return false;
+        }else if (UserContact.length < 10 || UserContact.length > 10) {
+            alert("Contact length must be of 10 digit..")
+            document.querySelector("#UserContact").focus()
+            return false;
+
+        } else if (isNaN(UserContact)) {
+            alert("Only numbers are allowed ")
+            document.querySelector("#UserContact").focus()
+            return false;    
+        
+        }  else if (UserAge < 5) {
+            alert("Age must be greater than 5")
+            document.querySelector("#UserAge").focus()
+            
+            return false;
+        
+        }
+        else {
+            // stored in a json database.........
+             
+            let movie_information=JSON.parse(localStorage.getItem("selectedItem"))
+
+            const user_book_info = {
+                user_name: document.querySelector("#UserName").value,
+                user_email: document.querySelector("#UserEmail").value,
+                user_contact: document.querySelector("#UserContact").value,
+                user_age: document.querySelector("#UserAge").value,
+                user_ticket_price: selected_price,
+                user_ticket_type: selected_type,
+                user_total_quantity: quantity,
+                user_total_pay: total_pay,
+                movie_name: movie_information.movie_name,
+                movie_img:movie_information.movie_img
+                
+                   
+            }
+            localStorage.setItem("user_book_infor", JSON.stringify(user_book_info));
+
+            // stored all user information  in json database
+
+            fetch("http://localhost:3000/ user_booking",{
+                method: "POST",
+                Headers: {                              //headers -> tell the user what type of data we are sending and trying to insert into json
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(user_book_info)      // body will we pass as a key
+                    
+                
+            }).then(r=>alert("Payment Successfull.........."))
+
+            // alert("Payment successfull ...........")
+           
+    }
+    
+    }
+    
+    
+
+    
+//  ============================================================================================================================
 // Booking_online_ticket
+
+
 let selected_price = 1;
+let selected_type;
+let quantity;
+let total_pay;
+
 function selected_ticket(ticket_type, price) {
     selected_price = price;
+    selected_type = ticket_type;
 
-    updateTotal();
-    
+
+updateTotal();
+
 }
 function updateTotal() {
-   let quantity= document.querySelector("#quantity").value
-    let total_pay = selected_price * quantity;
+   quantity= document.querySelector("#quantity").value
+  total_pay = selected_price * quantity;
 
-    document.querySelector("#total").innerText = total_pay;
-}
+ document.querySelector("#total").innerText = total_pay;
+ }
+
+
 
 // ==============================================================================================================
 
 
 
-// function togglepopup() {
-//     var popup = document.getElementById("popup");
-//     popup.style.display = (popup.style.display === "block") ? "none" : "block";
 
-//     window.onclick = function (event) {
-//         if (!event.target.closest('.side_page_icon')) {
-//             document.getElementById("popup").style.display = "none";
-//         }
-//     }
-// }
+function togglepopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+
+    window.onclick = function (event) {
+        if (!event.target.closest('.side_page_icon')) {
+            document.getElementById("popup").style.display = "none";
+        }
+    }
+}
 
 
 // document.querySelector(".location").addEventListener("click", () => {
@@ -761,4 +902,4 @@ if (movie_container) {
 
     );
 
-}
+    }

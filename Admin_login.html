@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_Login</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        .Admin_login{
+            background-image: url(adminbg.avif);
+            display: flex;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+           justify-content: center;
+           align-items: center;
+
+             label{
+                font-size: 11px;
+             }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="Admin_login">
+        
+        <div class="admin">
+            <h2>LOGIN AS ADMIN</h2>
+            <form action="Admin_page.html" onsubmit=" return ShowAdminInfo()">
+
+                <label for="admin_email">EMAIL</label><br>
+                <input type="text" placeholder="Enter Email" id="admin_email"><br><br>
+    
+                <label for="Admin_Password">PASSWORD</label><br>
+                <input type="password" placeholder="Enter password" id="Admin_Password"><br><br>
+    
+                <input type="submit" value="Login"><br><br>
+                <a href=""> back to homepage</a>
+
+            </form>
+        </div>
+       
+    </div>
+
+    <script>
+        // admin information
+
+        let AdminInfo={
+            Admin_Email:"Admin123@gmail.com",
+            Admin_pass:"Admin@123"
+        }
+        localStorage.setItem("AdminInformation",JSON.stringify(AdminInfo))
+
+        // admin matches with storrage
+
+        function ShowAdminInfo(){
+            let adminemail=document.querySelector("#admin_email").value;
+            let adminpass=document.querySelector("#Admin_Password").value;
+             
+            let match_admin_data=JSON.parse(localStorage.getItem("AdminInformation"))
+
+            if(adminemail!=match_admin_data.Admin_Email || adminpass!= match_admin_data.Admin_pass){
+                alert("Wrong verification ! Try again")
+                return false;
+                
+            }else{
+                return true;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

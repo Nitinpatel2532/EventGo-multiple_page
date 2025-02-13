@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_Page</title>
+    <link rel="stylesheet" href="EventGoScss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .userinfo{
+            background-image: url(userbg3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            padding: 10px;
+        }
+        th{
+            font-size: 12px;
+            background-color: lightblue;
+        }
+        tbody{
+            background-color: rgb(20, 191, 191);
+        }
+    </style>
+
+</head>
+<body style="background-color: white;">
+    <div class="navbar">
+        <div class="logo">
+            <h1><i>Event<span style="color: white;">Go</span>!</i></h1>
+        </div>
+
+        <div class="uldiv">
+            <ul>
+                <li><a href="Eventgo_homepage.html">Home</a></li>
+                <li><a href="3_moviepage.html">Movies </a></li>
+                <li><a href="2_eventpage.html">Events</a></li>
+                <li><a href="">Play</a></li>
+                <li><a href="">Activity</a></li>
+
+            </ul>
+        </div>
+
+        <div class="social_icons">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-square-google-plus"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    
+
+    <div class="userinfo">
+        <h3 style="color: white;">Users Information List</h3>
+        <table border="5px">
+            <th>Id</th>
+            <th>Username</th>
+            <th>UserEmail</th>
+            <th>UserContact</th>
+            <th>UserAge</th>
+            <th>Booked</th>
+            <th>Ticket_type</th>
+            <th>Ticket_price</th>
+            <th>Quantity</th>
+            <th>Total_Amount</th>
+            <th>Delete</th>
+            <th>Edit</th>
+           
+            <tbody id="collect_user_info">
+
+            </tbody>
+        </table>
+
+        <div id="edituserform">
+
+        </div>
+    </div>
+    
+    <script src="AdminUserInfo.js"></script>
+</body>
+</html>

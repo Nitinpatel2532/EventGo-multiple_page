@@ -72,8 +72,8 @@ let password1 = document.querySelector("#password1").value;
         alert("Only numbers are allowed")
         document.querySelector("#Contact1").focus()
         return false;
-    } else if (password1.length < 8) {
-        alert("please create strong password (max-8 digit)")
+    } else if (password1.length < 5) {
+        alert("please create strong password (max-5 digit)")
         document.querySelector("#password1").focus()
         return false;
     }
