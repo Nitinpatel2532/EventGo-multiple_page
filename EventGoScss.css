@@ -1432,6 +1432,28 @@ body {
   background-color: lightblue;
 }
 
+.email-tkt {
+  margin: 0;
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+  margin: 0px;
+}
+.email-tkt h2 {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+#download-tkt {
+  background-image: url(adminbg.avif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
 .theme1 {
   background-color: white;
   color: white;

@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicketShow</title>
+    <link rel="stylesheet" href="EventGoScss.css">
 </head>
-<body>
+<body style="background-color: white;">
     
-    <h1>TicketShow</h1>
+
+    <div class="email-tkt">
+        <h2>Download Your Ticket By Email</h2>
+        <label for="tkt-email">Email</label>
+        <input type="text" placeholder="Enter Email" id="tkt-email"><br><br>
+        <input type="submit" onclick="fetchTicket()">
+
+    </div>
     
+    <div id="download-tkt">
+
+    </div>
+
+    <script src="TicketDownlod.js"></script>
 </body>
+
+
+
 </html>

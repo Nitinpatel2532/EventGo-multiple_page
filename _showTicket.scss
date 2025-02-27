@@ -1,0 +1,27 @@
+.email-tkt{
+    margin: 0;
+    background-color: orange;
+    // background-image: url(kids.jpeg);
+    // background-repeat: no-repeat;
+    //  background-size: cover;
+     padding: 10px;
+     text-align: center;
+     margin: 0px;
+    // background-position:center;
+    h2{
+        font-size: 15px;
+        text-decoration: underline;
+    }
+}
+#download-tkt{
+    // background-color: red;
+    background-image: url(adminbg.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // border: 2px solid;
+    color: black;
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+}

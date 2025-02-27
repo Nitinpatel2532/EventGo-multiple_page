@@ -10,24 +10,77 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        .userinfo{
-            background-image: url(userbg3.jpg);
+        #adminbody{
+            /* background-image: url(userbg3.jpg); */
+            background-color: lightblue;
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
-            padding: 10px;
+            
         }
+        .userinfo{
+            margin: 10px;
+            /* text-align: center; */
+            margin-bottom: 5px;
+
+            h3{
+                font-size: 20px;
+                text-decoration: underline;
+                color: black;
+            }
+        }
+      
         th{
             font-size: 12px;
             background-color: lightblue;
+            border: 1px solid;
+            border-spacing: 0px;
+           
         }
         tbody{
             background-color: rgb(20, 191, 191);
+            border-spacing: 0px;
+        }
+        td{
+            font-size: 10px;
+            border: 1px solid;
+            border-spacing: 0px;
+        }
+
+        @media screen and (max-width:550px) {
+            .userinfo{
+            margin: 5px;
+            /* text-align: center; */
+
+            h3{
+                font-size: 12px;
+                text-decoration: underline;
+            }
+        }
+      
+        th{
+            font-size: 9px;
+            background-color: lightblue;
+            border: 1px solid;
+            border-spacing: 0px;
+           
+        }
+        tbody{
+            background-color: rgb(20, 191, 191);
+            border-spacing: 0px;
+        }
+        td{
+            font-size: 7px;
+            border: 1px solid;
+            border-spacing: 0px;
+        }
+
+            
         }
     </style>
 
 </head>
-<body style="background-color: white;">
+<body id="adminbody">
     <div class="navbar">
         <div class="logo">
             <h1><i>Event<span style="color: white;">Go</span>!</i></h1>
@@ -58,7 +111,7 @@
     
 
     <div class="userinfo">
-        <h3 style="color: white;">Users Information List</h3>
+        <h3>Users Information List</h3>
         <table border="5px">
             <th>Id</th>
             <th>Username</th>

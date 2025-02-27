@@ -894,7 +894,7 @@ if (movie_container) {
         });
         document.addEventListener("DOMContentLoaded", () => {
             movie_container.appendChild(div);
-    })
+        })
        
    
    
@@ -902,4 +902,7 @@ if (movie_container) {
 
     );
 
-    }
+
+}
+    
+ 

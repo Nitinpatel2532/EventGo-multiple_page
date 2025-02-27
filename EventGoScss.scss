@@ -46,8 +46,17 @@ html{
 // booking_ticket_online
 @import "_online_book_ticket.scss";
 
+// show tickets to user with all information........
+@import "_showTicket.scss";
+
+// testimonial section
+
+@import "_testimonialscss.scss";
 
 .theme1{
     background-color: white;
     color: white;
 }
+
+// ===============
+
