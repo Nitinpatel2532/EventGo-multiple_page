@@ -1,0 +1,21 @@
+Your Ticket
+
+Name: Hook
+
+Email: hook123@gmail.com
+
+Contact: 8719966634
+
+Age: 24
+
+Movie_Name: Loveyapa
+
+Price: 180
+
+Ticket_Type: Exclusive
+
+Total_Quantity: 4
+
+Total_Amount: 720
+
+Download Cancel

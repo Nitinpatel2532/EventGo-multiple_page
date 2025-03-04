@@ -1,53 +1,69 @@
 {
   " user_booking": [
     {
-      "id": "7de7",
+      "id": "550b",
       "user_name": "nitin",
-      "user_email": "nitin@123gmail.com",
+      "user_email": "nitin123@gmail.com",
       "user_contact": "8719966634",
-      "user_age": "24",
-      "user_ticket_price": 180,
-      "user_ticket_type": "Exclusive",
+      "user_age": "21",
+      "user_ticket_price": 250,
+      "user_ticket_type": "Premium",
       "user_total_quantity": "3",
-      "user_total_pay": 540,
+      "user_total_pay": 750,
       "movie_name": "Sanam Teri Kasam",
       "movie_img": "stk2.jpg"
     },
     {
-      "id": "c26f",
-      "user_name": "bob",
-      "user_email": "bob@123gmail.com",
-      "user_contact": "8827143851",
-      "user_age": "37",
-      "user_ticket_price": "250",
-      "user_ticket_type": "Premium",
-      "user_total_quantity": "3",
-      "user_total_pay": "750",
-      "movie_name": "Interstellar"
-    },
-    {
-      "id": "9b4a",
-      "user_name": "Adam",
-      "user_email": "Adam890@gmail.com",
-      "user_contact": "9632145685",
-      "user_age": "30",
-      "user_ticket_price": "130",
-      "user_ticket_type": "Normal",
-      "user_total_quantity": "3",
-      "user_total_pay": "390",
-      "movie_name": "Altaf Raja"
-    },
-    {
-      "id": "7ec2",
-      "user_name": "bob",
-      "user_email": "sakshi@123gmail.com",
-      "user_contact": "8719966634",
-      "user_age": "25",
-      "user_ticket_price": "180",
+      "id": "fb01",
+      "user_name": "abhi",
+      "user_email": "abhi123@gmail.com",
+      "user_contact": "6260503562",
+      "user_age": "26",
+      "user_ticket_price": 180,
       "user_ticket_type": "Exclusive",
       "user_total_quantity": "1",
-      "user_total_pay": "180",
-      "movie_name": "Bareilly ki Barfi"
+      "user_total_pay": 180,
+      "movie_name": "padmaavat",
+      "movie_img": "padmaavat.avif"
+    },
+    {
+      "id": "f420",
+      "user_name": "saksham",
+      "user_email": "saksham123@gmail.com",
+      "user_contact": "7489265847",
+      "user_age": "23",
+      "user_ticket_price": 130,
+      "user_ticket_type": "Normal",
+      "user_total_quantity": "2",
+      "user_total_pay": 260,
+      "movie_name": "Sky Force",
+      "movie_img": "skyforce.avif"
+    },
+    {
+      "id": "f674",
+      "user_name": "bob",
+      "user_email": "bob123@gmail.com",
+      "user_contact": "1122334455",
+      "user_age": "30",
+      "user_ticket_price": 180,
+      "user_ticket_type": "Exclusive",
+      "user_total_quantity": "6",
+      "user_total_pay": 1080,
+      "movie_name": "Deva",
+      "movie_img": "deva.avif"
+    },
+    {
+      "id": "98c0",
+      "user_name": "hook",
+      "user_email": "hook123@gmail.com",
+      "user_contact": "8821143256",
+      "user_age": "37",
+      "user_ticket_price": 130,
+      "user_ticket_type": "Normal",
+      "user_total_quantity": "2",
+      "user_total_pay": 260,
+      "movie_name": "Jo Bolta Hai Wohi Hota",
+      "movie_img": "harshGujral.jpeg"
     }
   ]
 }

@@ -27,11 +27,11 @@
                      <p>Ticket_Type: ${ticket.user_ticket_type}</p>
                     <p>Total_Quantity: ${ticket.user_total_quantity}</p>
                     <p>Total_Amount: ${ticket.user_total_pay}</p>
-                    <button onclick="downloadTicket(${ticket.id})">Download</button>
-                    <button onclick="cancelTicket(${ticket.id})">Cancel</button>
+                    <button onclick="downloadTicket('${ticket.id}')">Download</button>
+                    <button onclick="cancelTicket('${ticket.id}')">Cancel</button>
                     <hr>
                 `;
-                ticketInfo.appendChild(div);
+                ticketInfo.appendChild(div);    
             });
         } else {
             ticketInfo.innerHTML = "<p>No tickets found.</p>";
@@ -57,15 +57,16 @@ function downloadTicket(ticketId) {
 // // Function to cancel a ticket
 
 
-async function cancelTicket(ticketId) {
+function cancelTicket(ticketId) {
+     
     try {
-        const response=await fetch(`http://localhost:3000/ user_booking/ ${ticketId}`,{
+        const response= fetch(`http://localhost:3000/ user_booking/${ticketId}`,{
             method:"DELETE"
         })
     
 
         if (response.ok) {
-            document.getElementById("download-tkt").innerHTML = "<p>Ticket canceled successfully!</p>";
+            document.getElementById("download-tkt div").innerHTML = "<p>Ticket canceled successfully!</p>";
         }
     } catch (error) {
         console.error("Error canceling ticket:",error);

@@ -58,7 +58,10 @@ const check_data = () => {
     }
    
 }
-
+// open signup/login page
+function openWindow() {
+    window.open("1_login_page.html","_parent")
+}
 // =================================================================================================
 
 // update all recommended movies and events by js in homepage............
